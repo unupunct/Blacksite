@@ -1,0 +1,11 @@
+bin/
+obj/
+.tools/
+keystore/
+output/snaps/
+output/test-run.txt
+*.user
+Assets/reference/
+output/
+*.keystore
+*.jks

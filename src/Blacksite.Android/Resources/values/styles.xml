@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="blacksite_bg">#020612</color>
+  <style name="Blacksite.Theme" parent="@android:style/Theme.Material.NoActionBar">
+    <item name="android:windowBackground">@color/blacksite_bg</item>
+    <item name="android:statusBarColor">@color/blacksite_bg</item>
+    <item name="android:navigationBarColor">@color/blacksite_bg</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+  </style>
+  <style name="Blacksite.Splash" parent="@android:style/Theme.Material.NoActionBar">
+    <item name="android:windowBackground">@drawable/splash_screen</item>
+    <item name="android:statusBarColor">@color/blacksite_bg</item>
+    <item name="android:navigationBarColor">@color/blacksite_bg</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>
+</resources>
