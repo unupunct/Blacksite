@@ -1,6 +1,6 @@
 # BLACKSITE — Tactical Interface Simulator
 
-Turns a Windows PC or an Android tablet into a futuristic command-centre display: fifteen fully interactive sci-fi
+Turns a Windows or Linux PC (ParrotOS, Debian, Ubuntu, Kali ...) or an Android tablet into a futuristic command-centre display: fifteen fully interactive sci-fi
 interfaces, cinematic events, synthesised sound and voice, ambient/wall-display modes and multi-monitor setups.
 
 > **Entertainment only.** Every reading, satellite, camera feed, network, threat, unit and mission in BLACKSITE is
@@ -54,6 +54,32 @@ Both are purely visual and audible; nothing on disk or in your settings is touch
 Presets 11–15 use a shared **panel deck**: 10–11 panels each, tap a panel title to expand it, **PANELS** button to show/hide/reorder panels, change accent colour, data-update speed, animation speed and alert frequency, and save/restore the layout (stored per preset).
 
 ## Install
+
+### One line
+
+**Linux** (ParrotOS, Debian, Ubuntu, Kali, Mint, Fedora, Arch; x86-64 and ARM64) - installs for your user only:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/unupunct/Blacksite/main/install-linux.sh | bash
+```
+
+Then start **BLACKSITE** from the application menu or run `blacksite` (`blacksite --fullscreen --preset hacker` to open a preset
+full screen). Remove it with `... | bash -s -- --uninstall`. On Debian-based systems the script installs (with `sudo`, asking for your password) the few
+system packages it needs (fontconfig, X11 libraries, `pulseaudio-utils` for sound, `espeak-ng` for voice). Sound is played
+through `pacat` / `pw-cat` / `aplay`, whichever exists; without any of them the app runs silently.
+
+**Windows 10 / 11** (PowerShell, no admin rights):
+
+```powershell
+irm https://raw.githubusercontent.com/unupunct/Blacksite/main/install-windows.ps1 | iex
+```
+
+### Manual downloads
+
+Everything is on the [Releases](https://github.com/unupunct/Blacksite/releases) page.
+
+**Linux** - `blacksite-linux-x64.tar.gz` / `blacksite-linux-arm64.tar.gz` (self-contained, no .NET needed; verify with `SHA256SUMS`).
+Needs an X11 or XWayland desktop. Build it yourself with `python scripts/build-linux.py`.
 
 **Windows 10 / 11 (x64)** — download from the [Releases](https://github.com/unupunct/Blacksite/releases) page (built into `output/windows/`)
 * `BLACKSITE-Setup.exe` – per-user installer (no admin rights).
